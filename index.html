@@ -7,9 +7,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="image/logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  <nav class="navbar">
+    <img class="navbar__logo" src="image/logo.png" alt="Carla – By Carly Beauty" />
+    <ul class="navbar__links">
+      <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#avantapres">Avant / Après</a></li>
+      <li><a href="#infos">Infos & Contact</a></li>
+      <li><a href="#avis">Avis</a></li>
+    </ul>
+  </nav>
 
   <!-- ══════════════════════════════════════
        HERO  — crème
@@ -17,23 +31,34 @@
   <section class="hero">
     <div class="hero__inner">
 
-      <!-- Labels + titre dans leur propre bloc -->
-      <div class="hero__header">
-        <p class="hero__salon">@BYCARLYBEAUTY</p>
-        <p class="hero__label">RENCONTREZ VOTRE</p>
-        <h1 class="hero__title">Lash Artist</h1>
-      </div>
+      <!-- Gauche : 3 photos  |  Droite : texte -->
+      <div class="hero__layout">
 
-      <!-- Portrait + Bio côte à côte -->
-      <div class="hero__body">
-
-        <div class="hero__portrait-wrap">
-          <div class="frame frame--portrait">
-            <img src="image/TacheRousseur.png" alt="Carla" />
+        <!-- ── Photos ── -->
+        <div class="hero__photos">
+          <!-- Colonne 1 : 2 petites empilées -->
+          <div class="hero__photos-col">
+            <div class="frame frame--hero-sm">
+              <img src="image/TacheRousseur.png" alt="Résultat sourcils" />
+            </div>
+            <div class="frame frame--hero-sm">
+              <img src="image/Remplissage%203%20semaines" alt="Remplissage cils" />
+            </div>
+          </div>
+          <!-- Colonne 2 : 1 grande -->
+          <div class="hero__photos-col">
+            <div class="frame frame--hero-lg">
+              <img src="image/avant-apres1/cils%20a%20cils%20apres.png" alt="Résultat cils" />
+            </div>
           </div>
         </div>
 
-        <div class="hero__bio">
+        <!-- ── Texte ── -->
+        <div class="hero__text">
+          <p class="hero__salon">@BYCARLYBEAUTY</p>
+          <p class="hero__label">RENCONTREZ VOTRE</p>
+          <h1 class="hero__title">Lash Artist</h1>
+
           <p class="hero__bio-text">
             Diplômée depuis novembre en <strong>extensions de cils</strong> et <strong>rehaussement</strong>,
             je propose des prestations sur mesure, adaptées à la forme et au style de vos yeux.
@@ -53,9 +78,7 @@
           </div>
         </div>
 
-      </div>
-
-      <div class="hero__arrow">&#8964;</div>
+      </div><!-- /hero__layout -->
 
     </div>
   </section>
@@ -65,7 +88,7 @@
   <!-- ══════════════════════════════════════
        INFOS PRATIQUES  — brun
   ══════════════════════════════════════ -->
-  <section class="info">
+  <section class="info" id="infos">
     <div class="merged">
 
       <!-- ── Horaires + Contact ── -->
@@ -188,108 +211,94 @@
   <!-- ══════════════════════════════════════
        PRESTATIONS  — crème
   ══════════════════════════════════════ -->
-  <section class="services">
+  <section class="services" id="prestations">
     <div class="services__inner">
 
       <p class="section-label">NOS</p>
       <h2 class="services__title">PRESTATIONS</h2>
 
-      <div class="services__domicile-badge">
-        <span class="badge__dot"></span>
-        <span>Toutes les prestations sont réalisées à domicile</span>
-        <span class="badge__dot"></span>
-      </div>
+      <div class="svc-layout">
 
-      <!-- ─── Groupe 1 ─────────────────────── -->
-      <h3 class="services__group-title">Rehaussement &amp; Browlift</h3>
+        <!-- ─── Groupe 1 ─── -->
+        <div class="svc-group">
+          <h3 class="svc-group__title">Rehaussement &amp; Browlift</h3>
 
-      <div class="service-grid">
+          <div class="svc-row">
+            <div class="frame frame--thumb">
+              <img src="image/avant-apres1/Browlift%20%2B%20teinture%20%2B%20%C3%A9pilation%20apres.png" alt="Rehaussement" />
+            </div>
+            <div class="svc-row__info">
+              <p class="svc-row__name">Rehaussement de Cils</p>
+              <p class="svc-row__desc">Courbe naturelle &amp; regard ouvert — 6 à 8 sem.</p>
+              <p class="svc-row__price">40 €<span class="svc-row__alt"> · avec teinture 50 €</span></p>
+            </div>
+          </div>
 
-        <div class="service-card">
-          <div class="frame frame--service">
-            <img src="dossier sans titre/rehaussement.jpg" alt="Rehaussement de cils" onerror="this.style.display='none'" />
+          <div class="svc-row">
+            <div class="frame frame--thumb">
+              <img src="image/avant-apres1/Browlift%20%2B%20teinture%20%2B%20%C3%A9pilation%20apres.png" alt="Browlift" />
+            </div>
+            <div class="svc-row__info">
+              <p class="svc-row__name">Browlift</p>
+              <p class="svc-row__desc">Sourcils structurés &amp; levés naturellement</p>
+              <p class="svc-row__price">40 €<span class="svc-row__alt"> · avec teinture 50 €</span></p>
+            </div>
           </div>
-          <div class="service-card__info">
-            <p class="service-card__name">Rehaussement de Cils</p>
-            <p class="service-card__desc">Courbe naturelle &amp; regard ouvert — résultat 6 à 8 semaines</p>
-            <p class="service-card__price">40 €</p>
-            <p class="service-card__sub">+ Teinture cils &nbsp;→&nbsp; 50 €</p>
-          </div>
-        </div>
 
-        <div class="service-card">
-          <div class="frame frame--service">
-            <img src="image/avant-apres1/Browlift%20%2B%20teinture%20%2B%20%C3%A9pilation%20apres.png" alt="Browlift résultat" />
-          </div>
-          <div class="service-card__info">
-            <p class="service-card__name">Browlift</p>
-            <p class="service-card__desc">Sourcils structurés &amp; levés naturellement</p>
-            <p class="service-card__price">40 €</p>
-            <p class="service-card__sub">+ Teinture sourcils &nbsp;→&nbsp; 50 €</p>
-          </div>
-        </div>
-
-        <div class="service-card service-card--center">
-          <div class="frame frame--service">
-            <img src="image/avant-apres1/Browlift%20%2B%20teinture%20%2B%20%C3%A9pilation%20apres.png" alt="Épilation sourcils résultat" />
-          </div>
-          <div class="service-card__info">
-            <p class="service-card__name">Épilation &amp; Reconstruction Sourcils</p>
-            <p class="service-card__desc">Mise en forme &amp; reconstruction de l'arcade sourcilière</p>
-            <p class="service-card__price">30 €</p>
+          <div class="svc-row">
+            <div class="frame frame--thumb">
+              <img src="image/TacheRousseur.png" alt="Épilation sourcils" />
+            </div>
+            <div class="svc-row__info">
+              <p class="svc-row__name">Épilation &amp; Reconstruction Sourcils</p>
+              <p class="svc-row__desc">Mise en forme &amp; reconstruction de l'arcade</p>
+              <p class="svc-row__price">30 €</p>
+            </div>
           </div>
         </div>
 
-      </div>
+        <!-- Séparateur vertical -->
+        <div class="svc-vline"></div>
 
-      <div class="services__divider">
-        <span class="services__divider-line"></span>
-        <span class="services__divider-heart">♡</span>
-        <span class="services__divider-line"></span>
-      </div>
+        <!-- ─── Groupe 2 ─── -->
+        <div class="svc-group">
+          <h3 class="svc-group__title">Extensions de Cils</h3>
 
-      <!-- ─── Groupe 2 ─────────────────────── -->
-      <h3 class="services__group-title">Extensions de Cils</h3>
-
-      <div class="service-grid">
-
-        <div class="service-card">
-          <div class="frame frame--service">
-            <img src="image/avant-apres1/cils%20a%20cils%20apres.png" alt="Cil à cil résultat" />
+          <div class="svc-row">
+            <div class="frame frame--thumb">
+              <img src="image/avant-apres1/cils%20a%20cils%20apres.png" alt="Cil à cil" />
+            </div>
+            <div class="svc-row__info">
+              <p class="svc-row__name">Cil à Cil</p>
+              <p class="svc-row__desc">Effet naturel — 1 extension par cil naturel</p>
+              <p class="svc-row__price">60 €<span class="svc-row__alt"> · remplissage 45 €</span></p>
+            </div>
           </div>
-          <div class="service-card__info">
-            <p class="service-card__name">Cil à Cil</p>
-            <p class="service-card__desc">Effet naturel &amp; définition — 1 extension par cil naturel</p>
-            <p class="service-card__price">60 €</p>
-            <p class="service-card__sub">Remplissage (max 3 sem.) &nbsp;→&nbsp; 45 €</p>
-          </div>
-        </div>
 
-        <div class="service-card">
-          <div class="frame frame--service">
-            <img src="image/avant-apres1/cils%20a%20cils%202%20apres.png" alt="Mixte résultat" />
+          <div class="svc-row">
+            <div class="frame frame--thumb">
+              <img src="image/avant-apres1/cils%20a%20cils%202%20apres.png" alt="Mixte" />
+            </div>
+            <div class="svc-row__info">
+              <p class="svc-row__name">Mixte</p>
+              <p class="svc-row__desc">Classique &amp; volume — effet dramatique doux</p>
+              <p class="svc-row__price">75 €<span class="svc-row__alt"> · remplissage 60 €</span></p>
+            </div>
           </div>
-          <div class="service-card__info">
-            <p class="service-card__name">Mixte</p>
-            <p class="service-card__desc">Alliance classique &amp; volume pour un effet dramatique doux</p>
-            <p class="service-card__price">75 €</p>
-            <p class="service-card__sub">Remplissage (max 3 sem.) &nbsp;→&nbsp; 60 €</p>
-          </div>
-        </div>
 
-        <div class="service-card service-card--center">
-          <div class="frame frame--service">
-            <img src="image/Remplissage%203%20semaines" alt="Volume Russe" />
-          </div>
-          <div class="service-card__info">
-            <p class="service-card__name">Volume Russe 2D</p>
-            <p class="service-card__desc">Effet glamour &amp; plein volume — bouquet de 2 extensions</p>
-            <p class="service-card__price">80 €</p>
-            <p class="service-card__sub">Remplissage (max 3 sem.) &nbsp;→&nbsp; 65 €</p>
+          <div class="svc-row">
+            <div class="frame frame--thumb">
+              <img src="image/Remplissage%203%20semaines" alt="Volume Russe" />
+            </div>
+            <div class="svc-row__info">
+              <p class="svc-row__name">Volume Russe 2D</p>
+              <p class="svc-row__desc">Glamour &amp; plein volume — bouquet de 2 extensions</p>
+              <p class="svc-row__price">80 €<span class="svc-row__alt"> · remplissage 65 €</span></p>
+            </div>
           </div>
         </div>
 
-      </div>
+      </div><!-- /svc-layout -->
 
     </div>
   </section>
@@ -299,7 +308,7 @@
   <!-- ══════════════════════════════════════
        AVANT / APRÈS  — brun
   ══════════════════════════════════════ -->
-  <section class="avantapres">
+  <section class="avantapres" id="avantapres">
     <div class="avantapres__inner">
 
       <p class="section-label section-label--light">MON</p>
@@ -360,24 +369,6 @@
         </div>
       </div>
 
-      <div class="avantapres__sep"></div>
-
-      <!-- Travaux standalone -->
-      <p class="avantapres__label">Résultats</p>
-      <div class="avantapres__results">
-        <div class="result-block">
-          <div class="frame frame--pair">
-            <img src="image/TacheRousseur.png" alt="Résultat sourcils" />
-          </div>
-          <p class="result-block__caption">Sourcils</p>
-        </div>
-        <div class="result-block">
-          <div class="frame frame--pair">
-            <img src="image/Remplissage%203%20semaines" alt="Remplissage 3 semaines" />
-          </div>
-          <p class="result-block__caption">Remplissage — 3 semaines</p>
-        </div>
-      </div>
 
     </div>
   </section>
@@ -385,7 +376,7 @@
   <!-- ══════════════════════════════════════
        AVIS CLIENTS  — crème
   ══════════════════════════════════════ -->
-  <section class="reviews">
+  <section class="reviews" id="avis">
     <div class="reviews__inner">
 
       <h2 class="reviews__title">Avis Clients</h2>
