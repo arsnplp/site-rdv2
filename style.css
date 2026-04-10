@@ -983,6 +983,117 @@ a.contact-row:hover span:last-child {
 }
 
 /* ══════════════════════════════════════════════
+   BARRE INSTAGRAM
+══════════════════════════════════════════════ */
+.insta-bar {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.insta-bar__label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.insta-bar__script {
+  font-family: var(--font-script);
+  font-size: 56px;
+  color: var(--brown);
+  line-height: 1;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+.insta-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  margin-bottom: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.insta-bar__slot {
+  aspect-ratio: 1 / 1;
+  background: var(--cream-mid);
+  border: 1.5px solid var(--gold-dim);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.insta-bar__slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.insta-bar__grid:hover .insta-bar__slot {
+  opacity: 0.85;
+}
+
+.insta-bar__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.insta-bar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.insta-bar__btn--outline {
+  border: 1.5px solid var(--gold-dim);
+  color: var(--brown);
+  background: transparent;
+}
+
+.insta-bar__btn--outline:hover {
+  background: var(--gold-dim);
+}
+
+.insta-bar__btn--filled {
+  background: var(--gold);
+  color: var(--brown);
+  border: 1.5px solid transparent;
+}
+
+.insta-bar__btn--filled:hover {
+  background: var(--gold-light);
+}
+
+@media (max-width: 768px) {
+  .insta-bar__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* Cacher les 3 derniers slots sur mobile */
+  .insta-bar__slot:nth-child(n+4) {
+    display: none;
+  }
+  .insta-bar__script {
+    font-size: 44px;
+  }
+}
+
+/* ══════════════════════════════════════════════
    BOUTONS RDV (CTA)
 ══════════════════════════════════════════════ */
 .btn-rdv {
