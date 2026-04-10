@@ -690,32 +690,18 @@ a.contact-row:hover span:last-child {
 
 .stack-card {
   position: sticky;
-  top: 60px;
+  top: 52px; /* hauteur navbar */
+  height: calc(100vh - 52px);
   z-index: var(--z);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 var(--pad-x) 24px;
-  transform-origin: top center;
-  transition: transform 0.1s ease;
+  overflow: hidden;
 }
 
 .stack-card img {
   display: block;
   width: 100%;
-  max-width: 520px;
-  height: auto;
-  border-radius: 16px;
-  border: 2px solid var(--gold-dim);
-  box-shadow: 0 12px 48px rgba(74, 44, 26, 0.18);
+  height: 100%;
   object-fit: cover;
-}
-
-/* Desktop : plus large */
-@media (min-width: 768px) {
-  .stack-card img {
-    max-width: 680px;
-  }
+  object-position: center;
 }
 
 /* ══════════════════════════════════════════════

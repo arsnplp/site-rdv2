@@ -167,15 +167,15 @@
     </div>
 
     <div class="stack-section">
-      <div class="stack-card" style="--z:9"><img src="les%20avant%20apres/aa1.png" alt="Avant Après 1" /></div>
-      <div class="stack-card" style="--z:8"><img src="les%20avant%20apres/aa2.png" alt="Avant Après 2" /></div>
-      <div class="stack-card" style="--z:7"><img src="les%20avant%20apres/aa3.png" alt="Avant Après 3" /></div>
-      <div class="stack-card" style="--z:6"><img src="les%20avant%20apres/aa4.png" alt="Avant Après 4" /></div>
+      <div class="stack-card" style="--z:1"><img src="les%20avant%20apres/aa1.png" alt="Avant Après 1" /></div>
+      <div class="stack-card" style="--z:2"><img src="les%20avant%20apres/aa2.png" alt="Avant Après 2" /></div>
+      <div class="stack-card" style="--z:3"><img src="les%20avant%20apres/aa3.png" alt="Avant Après 3" /></div>
+      <div class="stack-card" style="--z:4"><img src="les%20avant%20apres/aa4.png" alt="Avant Après 4" /></div>
       <div class="stack-card" style="--z:5"><img src="les%20avant%20apres/aa5.png" alt="Avant Après 5" /></div>
-      <div class="stack-card" style="--z:4"><img src="les%20avant%20apres/aa6.png" alt="Avant Après 6" /></div>
-      <div class="stack-card" style="--z:3"><img src="les%20avant%20apres/aa7.png" alt="Avant Après 7" /></div>
-      <div class="stack-card" style="--z:2"><img src="les%20avant%20apres/aa8.png" alt="Avant Après 8" /></div>
-      <div class="stack-card" style="--z:1"><img src="les%20avant%20apres/aa9.png" alt="Avant Après 9" /></div>
+      <div class="stack-card" style="--z:6"><img src="les%20avant%20apres/aa6.png" alt="Avant Après 6" /></div>
+      <div class="stack-card" style="--z:7"><img src="les%20avant%20apres/aa7.png" alt="Avant Après 7" /></div>
+      <div class="stack-card" style="--z:8"><img src="les%20avant%20apres/aa8.png" alt="Avant Après 8" /></div>
+      <div class="stack-card" style="--z:9"><img src="les%20avant%20apres/aa9.png" alt="Avant Après 9" /></div>
     </div>
   </section>
 
@@ -369,32 +369,5 @@
     <p class="footer__copy">&#169; 2025 &middot; Tous droits réservés</p>
   </footer>
 
-  <script>
-    (function () {
-      const cards = document.querySelectorAll('.stack-card');
-      const SCALE_STEP = 0.04;
-      const MAX_SCALE_DOWN = SCALE_STEP * (cards.length - 1);
-
-      function onScroll() {
-        cards.forEach(function (card, i) {
-          const rect = card.getBoundingClientRect();
-          // Combien de cartes sont passées au-dessus de celle-ci
-          let covered = 0;
-          cards.forEach(function (other, j) {
-            if (j > i) {
-              const otherRect = other.getBoundingClientRect();
-              if (otherRect.top <= 60 + 4) covered++;
-            }
-          });
-          const scale = Math.max(1 - covered * SCALE_STEP, 1 - MAX_SCALE_DOWN);
-          card.style.transform = 'scale(' + scale + ')';
-          card.style.opacity = covered >= cards.length - 1 ? '0.4' : '1';
-        });
-      }
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
-  </script>
 </body>
 </html>
