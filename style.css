@@ -1360,7 +1360,6 @@ a.contact-row:hover span:last-child {
   .navbar {
     padding: 0 16px;
     height: 62px;
-    position: relative;
     justify-content: space-between;
   }
   .navbar__logo {
