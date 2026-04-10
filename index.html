@@ -16,7 +16,15 @@
        NAV
   ══════════════════════════════════════ -->
   <nav class="navbar">
+    <!-- Hamburger (mobile gauche) -->
+    <button class="navbar__burger" aria-label="Menu" onclick="document.querySelector('.navbar__drawer').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Logo centré -->
     <img class="navbar__logo" src="image/logo.png" alt="Carla – By Carly Beauty" />
+
+    <!-- Bouton réserver (mobile droite) + liens desktop -->
     <ul class="navbar__links">
       <li><a href="#prestations">Prestations</a></li>
       <li><a href="#avantapres">Avant / Après</a></li>
@@ -24,7 +32,20 @@
       <li><a href="#infos">Contact</a></li>
       <li><a href="#rdv" class="navbar__rdv">Réserver</a></li>
     </ul>
+    <a href="#rdv" class="navbar__rdv navbar__rdv--mobile">Réserver</a>
   </nav>
+
+  <!-- Drawer mobile -->
+  <div class="navbar__drawer">
+    <button class="navbar__drawer-close" aria-label="Fermer" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">✕</button>
+    <ul>
+      <li><a href="#prestations" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Prestations</a></li>
+      <li><a href="#avantapres" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Avant / Après</a></li>
+      <li><a href="#avis" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Avis</a></li>
+      <li><a href="#infos" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Contact</a></li>
+      <li><a href="#rdv" onclick="document.querySelector('.navbar__drawer').classList.remove('open')">Réserver</a></li>
+    </ul>
+  </div>
 
   <!-- ══════════════════════════════════════
        HERO  — crème
