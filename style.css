@@ -983,6 +983,146 @@ a.contact-row:hover span:last-child {
 }
 
 /* ══════════════════════════════════════════════
+   BOUTONS RDV (CTA)
+══════════════════════════════════════════════ */
+.btn-rdv {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 32px;
+  background: var(--brown);
+  color: var(--gold-light);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 40px;
+  border: 1.5px solid var(--gold-dim);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-rdv:hover {
+  background: var(--gold);
+  color: var(--brown);
+  border-color: var(--gold);
+}
+
+.btn-rdv--light {
+  background: var(--gold-light);
+  color: var(--brown);
+  border-color: transparent;
+  margin-top: 44px;
+}
+
+.btn-rdv--light:hover {
+  background: var(--cream);
+  color: var(--brown);
+}
+
+/* Lien RDV dans la navbar */
+.navbar__rdv {
+  background: var(--gold) !important;
+  color: var(--brown) !important;
+  opacity: 1 !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+}
+
+.navbar__rdv:hover {
+  background: var(--gold-light) !important;
+}
+
+/* ══════════════════════════════════════════════
+   SECTION RDV
+══════════════════════════════════════════════ */
+.rdv-section {
+  background: var(--brown-dark);
+  padding: 100px var(--pad-x);
+  text-align: center;
+}
+
+.rdv-inner {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.rdv__eyebrow {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--gold);
+  opacity: 0.65;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.rdv__title {
+  font-family: var(--font-script);
+  font-size: clamp(56px, 12vw, 88px);
+  font-weight: 400;
+  color: var(--gold-light);
+  line-height: 1.05;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.rdv__sub {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(242, 228, 208, 0.55);
+  margin-bottom: 48px;
+  letter-spacing: 0.3px;
+}
+
+.rdv__call {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 40px;
+  background: var(--gold);
+  color: var(--brown);
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 28px;
+}
+
+.rdv__call:hover {
+  background: var(--gold-light);
+  transform: scale(1.03);
+}
+
+.rdv__call-icon {
+  display: flex;
+  align-items: center;
+  color: var(--brown);
+}
+
+.rdv__note {
+  font-size: 10px;
+  font-weight: 300;
+  color: rgba(242, 228, 208, 0.38);
+  letter-spacing: 0.5px;
+}
+
+.rdv__note a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.rdv__note a:hover {
+  color: var(--gold-light);
+}
+
+/* ══════════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════════ */
 .footer {
