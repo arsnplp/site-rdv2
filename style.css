@@ -1035,8 +1035,10 @@ a.contact-row:hover span:last-child {
   display: block;
 }
 
-.insta-bar__grid:hover .insta-bar__slot {
-  opacity: 0.85;
+.insta-bar__slot:hover {
+  opacity: 0.82;
+  transform: scale(1.02);
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .insta-bar__actions {
