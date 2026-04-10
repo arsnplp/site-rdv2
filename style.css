@@ -1017,55 +1017,162 @@ a.contact-row:hover span:last-child {
 }
 
 /* ══════════════════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE MOBILE  (≤ 768px)
 ══════════════════════════════════════════════ */
-@media (max-width: 480px) {
-  :root { --pad-x: 20px; }
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 20px;
+  }
 
+  /* ── Navbar ── */
+  .navbar {
+    padding: 0 16px;
+    height: 48px;
+  }
+  .navbar__logo {
+    height: 30px;
+  }
+  .navbar__links {
+    gap: 14px;
+  }
+  .navbar__links a {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 40px 0 32px;
+  }
   .hero__layout {
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
   }
-
   .hero__photos {
     width: 100%;
+    margin-left: 0;
+    gap: 10px;
   }
-
+  .hero__photos-col:first-child {
+    flex: 0 0 40%;
+    gap: 10px;
+  }
   .hero__text {
     padding-top: 0;
+    width: 100%;
   }
-
   .hero__title {
+    font-size: clamp(52px, 14vw, 80px);
+    margin-bottom: 24px;
+  }
+  .hero__bio-card {
+    padding: 18px 20px;
+  }
+  .hero__bio-text {
+    font-size: 12px;
+  }
+  .hero__bio-domicile {
+    font-size: 10.5px;
+  }
+  .hero__signature {
+    font-size: 52px;
+  }
+
+  /* ── Wave ── */
+  .wave {
+    height: 60px;
+    object-fit: cover;
+  }
+
+  /* ── Prestations ── */
+  .services {
+    padding: 48px var(--pad-x);
+  }
+  .arch-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+    padding: 0;
+  }
+  .arch-name {
+    font-size: 20px;
+  }
+  .arch-desc {
+    font-size: 8.5px;
+  }
+  .arch-price {
+    font-size: 13px;
+  }
+
+  /* ── Avant/Après ── */
+  .avantapres__header {
+    padding: 48px var(--pad-x) 32px;
+  }
+  .avantapres__title {
+    font-size: clamp(52px, 14vw, 80px);
+  }
+  .stack-card {
+    top: 48px;
+    height: calc(100vh - 48px);
+    padding: 20px var(--pad-x);
+  }
+  .stack-card img {
+    max-width: 100%;
+    max-height: calc(100vh - 110px);
+    border-radius: 14px;
+  }
+
+  /* ── Avis ── */
+  .reviews {
+    padding: 40px var(--pad-x) 60px;
+  }
+  .reviews__title {
     font-size: clamp(48px, 13vw, 72px);
+    margin-bottom: 40px;
+  }
+  .review__text {
+    font-size: 11px;
+  }
+  .review__head {
+    gap: 12px;
   }
 
-  .checklist {
-    grid-template-columns: 1fr;
+  /* ── Infos / Contact ── */
+  .info {
+    padding: 48px var(--pad-x) 56px;
   }
-
   .info-top {
     flex-direction: column;
     align-items: center;
     gap: 36px;
   }
-
   .info-vline {
     width: 40px;
     height: 1px;
     align-self: auto;
     margin: 0;
   }
-
-  .service-card--center {
-    width: 65%;
+  .info-col {
+    max-width: 100%;
+    width: 100%;
   }
-}
+  .checklist {
+    grid-template-columns: 1fr;
+  }
+  .checklist__item {
+    justify-content: flex-start;
+  }
+  .merged__sep {
+    margin: 36px 0;
+  }
+  .pol-list {
+    max-width: 100%;
+  }
 
-@media (min-width: 600px) {
-  .hero__bio p          { font-size: 13px; }
-  .checklist__item      { font-size: 11px; }
-  .review__text         { font-size: 12px; }
-  .service-card__name   { font-size: 12px; }
-  .service-card__desc   { font-size: 10px; }
-  .service-card__price  { font-size: 18px; }
+  /* ── Footer ── */
+  .footer {
+    padding: 32px var(--pad-x) 24px;
+  }
+  .footer__brand {
+    font-size: 52px;
+  }
 }
