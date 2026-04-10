@@ -686,22 +686,37 @@ a.contact-row:hover span:last-child {
 /* ── Stack scroll effect ── */
 .stack-section {
   position: relative;
+  background: var(--cream);
 }
 
 .stack-card {
   position: sticky;
-  top: 52px; /* hauteur navbar */
+  top: 52px;
   height: calc(100vh - 52px);
   z-index: var(--z);
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px var(--pad-x);
 }
 
 .stack-card img {
   display: block;
   width: 100%;
-  height: 100%;
+  max-width: 420px;
+  max-height: calc(100vh - 140px);
   object-fit: cover;
-  object-position: center;
+  border-radius: 18px;
+  border: 2px solid var(--gold);
+  outline: 1px solid rgba(184,137,90,0.25);
+  outline-offset: 6px;
+  box-shadow: 0 20px 60px rgba(74,44,26,0.20);
+}
+
+@media (min-width: 768px) {
+  .stack-card img {
+    max-width: 500px;
+  }
 }
 
 /* ══════════════════════════════════════════════
