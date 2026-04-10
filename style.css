@@ -786,7 +786,7 @@ a.contact-row:hover span:last-child {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
 
   .stack-sidebar__methods span {
@@ -800,6 +800,31 @@ a.contact-row:hover span:last-child {
     border-radius: 20px;
   }
 
+  .stack-sidebar__para {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(74,44,26,0.70);
+    margin-bottom: 36px;
+  }
+
+  .stack-sidebar__para strong {
+    color: var(--brown);
+    font-weight: 600;
+  }
+
+  .stack-sidebar__reviews-label {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    opacity: 0.65;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    border-top: 1px solid var(--gold-dim);
+    padding-top: 24px;
+  }
+
   /* Reviews avec transition */
   .stack-reviews-wrap {
     position: relative;
@@ -810,9 +835,10 @@ a.contact-row:hover span:last-child {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.45s ease, transform 0.45s ease;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
   }
 
@@ -824,11 +850,11 @@ a.contact-row:hover span:last-child {
   }
 
   .stack-review__quote {
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 13.5px;
+    font-weight: 400;
     font-style: italic;
-    line-height: 1.8;
-    color: rgba(74,44,26,0.72);
+    line-height: 1.85;
+    color: var(--brown);
     margin-bottom: 12px;
   }
 
