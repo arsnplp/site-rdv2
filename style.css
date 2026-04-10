@@ -1454,10 +1454,20 @@ a.contact-row:hover span:last-child {
 
   /* ── Avant/Après ── */
   .avantapres__header {
-    padding: 36px var(--pad-x) 24px;
+    padding: 20px var(--pad-x) 12px;
   }
   .avantapres__title {
-    font-size: clamp(44px, 12vw, 72px);
+    font-size: clamp(36px, 10vw, 56px);
+  }
+  .stack-card {
+    top: 62px;
+    height: calc(70vh - 62px);
+    padding: 10px 8px 10px 12px;
+  }
+  .stack-sidebar {
+    top: 62px;
+    height: calc(70vh - 62px);
+    padding: 10px 12px 10px 8px;
   }
 
   /* ── Avis ── */
