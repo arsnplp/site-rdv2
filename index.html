@@ -433,8 +433,10 @@
   <script>
     (function () {
       var current = -1;
+      var total = 9;
 
       function setActive(idx) {
+        idx = Math.max(0, Math.min(total - 1, idx));
         if (idx === current) return;
         current = idx;
         document.querySelectorAll('.stack-review').forEach(function (r) {
@@ -444,26 +446,14 @@
         if (next) next.classList.add('active');
       }
 
-      function getActiveIdx() {
-        var cards = document.querySelectorAll('.stack-card[data-idx]');
-        var navH = 52;
-        var viewMid = navH + (window.innerHeight - navH) / 2;
-        var best = 0;
-        var bestDist = Infinity;
-        cards.forEach(function (card) {
-          var rect = card.getBoundingClientRect();
-          var cardMid = rect.top + rect.height / 2;
-          var dist = Math.abs(cardMid - viewMid);
-          if (dist < bestDist) {
-            bestDist = dist;
-            best = parseInt(card.getAttribute('data-idx'));
-          }
-        });
-        return best;
-      }
-
       function onScroll() {
-        setActive(getActiveIdx());
+        var section = document.querySelector('.stack-photos');
+        if (!section) return;
+        var sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        var cardH = window.innerHeight - 52;
+        var scrolled = window.scrollY - sectionTop;
+        var idx = Math.floor(scrolled / cardH);
+        setActive(idx);
       }
 
       window.addEventListener('scroll', onScroll, { passive: true });
