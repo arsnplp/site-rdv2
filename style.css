@@ -44,7 +44,8 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden; /* bloque tout scroll horizontal sur mobile */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* ══════════════════════════════════════════════
@@ -190,8 +191,9 @@ body {
   font-family: var(--font-body);
   background: var(--cream);
   color: var(--brown);
+  overflow-x: hidden;
+  width: 100%;
   min-width: 320px;
-  max-width: 100%;
 }
 
 img { display: block; max-width: 100%; }
