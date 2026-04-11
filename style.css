@@ -65,6 +65,7 @@ html { scroll-behavior: smooth; }
   grid-column: 2;
   display: flex;
   align-items: center;
+  justify-self: center;
 }
 
 .navbar__logo {
