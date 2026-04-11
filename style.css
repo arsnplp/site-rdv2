@@ -52,16 +52,19 @@ html { scroll-behavior: smooth; }
   top: 0;
   z-index: 200;
   background: var(--brown);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   padding: 0 var(--pad-x);
   height: 62px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
 
+/* Logo toujours dans la colonne centrale → centré parfaitement */
 .navbar__logo-link {
-  display: contents;
+  grid-column: 2;
+  display: flex;
+  align-items: center;
 }
 
 .navbar__logo {
@@ -161,6 +164,8 @@ html { scroll-behavior: smooth; }
   list-style: none;
   display: flex;
   gap: 32px;
+  grid-column: 3;
+  justify-self: end;
 }
 
 .navbar__links a {
@@ -181,7 +186,8 @@ body {
   font-family: var(--font-body);
   background: var(--cream);
   color: var(--brown);
-  overflow-x: hidden;
+  overflow-x: clip; /* clip évite le scrollbar horizontal sans bloquer sticky/zoom */
+  min-width: 320px;
 }
 
 img { display: block; max-width: 100%; }
@@ -1647,22 +1653,28 @@ a.contact-row:hover span:last-child {
   .navbar {
     padding: 0 16px;
     height: 62px;
-    justify-content: space-between;
+    grid-template-columns: auto 1fr auto;
+  }
+  .navbar__burger {
+    grid-column: 1;
+    display: flex;
+    z-index: 1;
+  }
+  .navbar__logo-link {
+    grid-column: 2;
+    justify-self: center;
   }
   .navbar__logo {
     height: 46px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .navbar__burger {
-    display: flex;
-    z-index: 1;
+    position: static;
+    transform: none;
   }
   .navbar__links {
     display: none; /* caché sur mobile, remplacé par le drawer */
   }
   .navbar__rdv--mobile {
+    grid-column: 3;
+    justify-self: end;
     display: inline-flex;
     align-items: center;
     z-index: 1;
