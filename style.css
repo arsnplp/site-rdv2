@@ -304,7 +304,7 @@ img { display: block; max-width: 100%; }
 }
 
 .hero__title {
-  font-family: 'Cherolina', cursive;
+  font-family: var(--font-script);
   font-size: clamp(72px, 14vw, 150px);
   font-weight: 400;
   color: #fff;
@@ -960,7 +960,7 @@ a.contact-row:hover span:last-child {
   width: 170px;
   height: 310px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 0;
   border: 2px solid var(--gold);
   outline: 1px solid rgba(184,137,90,0.25);
   outline-offset: 5px;
@@ -1399,7 +1399,7 @@ a.contact-row:hover span:last-child {
   aspect-ratio: 1 / 1;
   background: var(--cream-mid);
   border: 1.5px solid var(--gold-dim);
-  border-radius: 6px;
+  border-radius: 0;
   overflow: hidden;
   transition: opacity 0.2s;
   min-height: 160px;
@@ -1463,10 +1463,17 @@ a.contact-row:hover span:last-child {
 @media (max-width: 768px) {
   .insta-bar__grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0 12px;
+    margin-bottom: 20px;
   }
   /* Cacher les 3 derniers slots sur mobile */
   .insta-bar__slot:nth-child(n+4) {
     display: none;
+  }
+  .insta-bar__slot {
+    min-height: unset;
+    width: 100%;
   }
   .insta-bar__script {
     font-size: 44px;
