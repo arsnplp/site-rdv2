@@ -1666,7 +1666,8 @@ a.contact-row:hover span:last-child {
   .navbar {
     padding: 0 16px;
     height: 62px;
-    position: relative; /* nécessaire pour le centrage absolu du logo */
+    position: sticky; /* garde la nav en haut au scroll */
+    top: 0;
   }
   .navbar__burger {
     grid-column: 1;
