@@ -304,7 +304,7 @@ img { display: block; max-width: 100%; }
 }
 
 .hero__title {
-  font-family: var(--font-script);
+  font-family: 'Cherolina', cursive;
   font-size: clamp(72px, 14vw, 150px);
   font-weight: 400;
   color: #fff;
@@ -313,19 +313,17 @@ img { display: block; max-width: 100%; }
 }
 
 .hero__suptitle {
-  font-family: 'Cherolina', cursive;
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: rgba(242,228,208,0.80);
   margin-top: 60px;
 }
 
 .hero__tagline {
-  font-family: 'Cherolina', cursive;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 300;
   letter-spacing: 1px;
   color: rgba(242,228,208,0.70);
 }
