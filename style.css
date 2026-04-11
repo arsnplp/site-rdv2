@@ -42,7 +42,10 @@
   --pad-x:        36px;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* bloque tout scroll horizontal sur mobile */
+}
 
 /* ══════════════════════════════════════════════
    NAV
@@ -187,8 +190,8 @@ body {
   font-family: var(--font-body);
   background: var(--cream);
   color: var(--brown);
-  overflow-x: clip; /* clip évite le scrollbar horizontal sans bloquer sticky/zoom */
   min-width: 320px;
+  max-width: 100%;
 }
 
 img { display: block; max-width: 100%; }
@@ -1654,7 +1657,7 @@ a.contact-row:hover span:last-child {
   .navbar {
     padding: 0 16px;
     height: 62px;
-    grid-template-columns: auto 1fr auto;
+    position: relative; /* nécessaire pour le centrage absolu du logo */
   }
   .navbar__burger {
     grid-column: 1;
@@ -1662,13 +1665,14 @@ a.contact-row:hover span:last-child {
     z-index: 1;
   }
   .navbar__logo-link {
-    grid-column: 2;
-    justify-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    grid-column: unset;
+    justify-self: unset;
   }
   .navbar__logo {
     height: 46px;
-    position: static;
-    transform: none;
   }
   .navbar__links {
     display: none; /* caché sur mobile, remplacé par le drawer */
