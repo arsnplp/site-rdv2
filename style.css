@@ -1666,8 +1666,15 @@ a.contact-row:hover span:last-child {
   .navbar {
     padding: 0 16px;
     height: 62px;
-    position: sticky; /* garde la nav en haut au scroll */
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 200;
+  }
+  body {
+    padding-top: 62px;
   }
   .navbar__burger {
     grid-column: 1;
