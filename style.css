@@ -809,6 +809,13 @@ a.contact-row:hover span:last-child {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.arch-card:hover {
+  transform: translateY(-4px);
 }
 
 /* Cadre en arche */
