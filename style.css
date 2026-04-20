@@ -1321,6 +1321,14 @@ a.contact-row:hover span:last-child {
   border: 2px solid var(--gold-dim);
   background: rgba(184, 137, 90, 0.15);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0;
 }
 
 .review__stars {
