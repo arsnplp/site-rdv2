@@ -1669,6 +1669,23 @@ a.contact-row:hover span:last-child {
   color: rgba(212, 169, 122, 0.28);
 }
 
+.footer__credit {
+  margin-top: 6px;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: rgba(212, 169, 122, 0.20);
+}
+
+.footer__credit a {
+  color: rgba(212, 169, 122, 0.35);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__credit a:hover {
+  color: rgba(212, 169, 122, 0.65);
+}
+
 /* ══════════════════════════════════════════════
    RESPONSIVE MOBILE  (≤ 768px)
 ══════════════════════════════════════════════ */
