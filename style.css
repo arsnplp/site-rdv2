@@ -1663,36 +1663,36 @@ a.contact-row:hover span:last-child {
 }
 
 .footer__copy {
-  font-size: 8.5px;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 2px;
-  color: rgba(212, 169, 122, 0.28);
+  letter-spacing: 1.5px;
+  color: rgba(212, 169, 122, 0.55);
 }
 
 .footer__copy a {
-  color: rgba(212, 169, 122, 0.45) !important;
+  color: rgba(212, 169, 122, 0.7) !important;
   text-decoration: none !important;
 }
 
 .footer__copy a:hover {
-  color: rgba(212, 169, 122, 0.75) !important;
+  color: rgba(212, 169, 122, 1) !important;
 }
 
 .footer__credit {
   margin-top: 6px;
-  font-size: 9.5px;
+  font-size: 12px;
   letter-spacing: 1.5px;
-  color: rgba(212, 169, 122, 0.28);
+  color: rgba(212, 169, 122, 0.55);
 }
 
 .footer__credit a {
-  color: rgba(212, 169, 122, 0.45) !important;
+  color: rgba(212, 169, 122, 0.7) !important;
   text-decoration: none !important;
   transition: color 0.2s;
 }
 
 .footer__credit a:hover {
-  color: rgba(212, 169, 122, 0.75) !important;
+  color: rgba(212, 169, 122, 1) !important;
 }
 
 /* ══════════════════════════════════════════════
