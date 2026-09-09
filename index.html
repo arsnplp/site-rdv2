@@ -23,59 +23,100 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BeautySalon",
-    "name": "By Carly Beauty",
-    "alternateName": "Bycarlybeauty",
-    "description": "Institut de beauté à Aix-les-Milles spécialisé en extensions de cils (cil à cil, volume mixte, volume russe), rehaussement de cils et browlift. Sur rendez-vous.",
-    "url": "https://bycarlybeauty.fr",
-    "telephone": "+33602594728",
-    "email": "slvdrcarla@gmail.com",
-    "image": "https://bycarlybeauty.fr/photo/image/Haut1.png",
-    "logo": "https://bycarlybeauty.fr/photo/image/vraislogo.png",
-    "priceRange": "€€",
-    "currenciesAccepted": "EUR",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "245 Chemin du Mont Robert",
-      "addressLocality": "Aix-en-Provence",
-      "addressRegion": "Provence-Alpes-Côte d'Azur",
-      "postalCode": "13290",
-      "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 43.5042,
-      "longitude": 5.3536
-    },
-    "openingHoursSpecification": [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "09:00",
-        "closes": "19:00"
+        "@type": "WebSite",
+        "@id": "https://bycarlybeauty.fr/#website",
+        "url": "https://bycarlybeauty.fr/",
+        "name": "By Carly Beauty",
+        "inLanguage": "fr-FR",
+        "publisher": { "@id": "https://bycarlybeauty.fr/#salon" }
+      },
+      {
+        "@type": ["BeautySalon", "LocalBusiness"],
+        "@id": "https://bycarlybeauty.fr/#salon",
+        "name": "By Carly Beauty",
+        "alternateName": ["Bycarlybeauty", "Carly Beauty"],
+        "description": "Institut de beaut\u00e9 \u00e0 Aix-les-Milles sp\u00e9cialis\u00e9 en extensions de cils (cil \u00e0 cil, volume mixte, volume russe), rehaussement de cils et browlift. Sur rendez-vous.",
+        "url": "https://bycarlybeauty.fr/",
+        "mainEntityOfPage": { "@id": "https://bycarlybeauty.fr/#website" },
+        "telephone": "+33602594728",
+        "email": "slvdrcarla@gmail.com",
+        "image": [
+          "https://bycarlybeauty.fr/photo/image/Haut1.png",
+          "https://bycarlybeauty.fr/photo/image/Hautd3.png"
+        ],
+        "logo": "https://bycarlybeauty.fr/photo/image/vraislogo.png",
+        "priceRange": "\u20ac\u20ac",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Esp\u00e8ces, Carte bancaire, Virement",
+        "knowsLanguage": "fr-FR",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "245 Chemin du Mont Robert",
+          "addressLocality": "Aix-en-Provence",
+          "addressRegion": "Provence-Alpes-C\u00f4te d'Azur",
+          "postalCode": "13290",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.5042,
+          "longitude": 5.3536
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=43.5042,5.3536",
+        "areaServed": [
+          { "@type": "City", "name": "Aix-en-Provence" },
+          { "@type": "Place", "name": "Aix-les-Milles" },
+          { "@type": "City", "name": "\u00c9guilles" },
+          { "@type": "City", "name": "Venelles" },
+          { "@type": "City", "name": "Bouc-Bel-Air" },
+          { "@type": "Place", "name": "Luynes" }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/bycarlybeauty/"
+        ],
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://calendly.com/slvdrcarla",
+            "inLanguage": "fr-FR",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          },
+          "result": { "@type": "Reservation", "name": "Rendez-vous beaut\u00e9" }
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Prestations beaut\u00e9",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rehaussement de cils", "description": "Courbe naturelle et regard ouvert \u2014 4 \u00e0 6 semaines", "areaServed": "Aix-en-Provence" }, "price": "40", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Browlift", "description": "Sourcils structur\u00e9s et lev\u00e9s naturellement", "areaServed": "Aix-en-Provence" }, "price": "40", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "\u00c9pilation et reconstruction des sourcils", "areaServed": "Aix-en-Provence" }, "price": "30", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extensions de cils cil \u00e0 cil", "description": "Effet naturel \u2014 1 extension par cil naturel", "areaServed": "Aix-en-Provence" }, "price": "60", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extensions de cils volume mixte", "description": "Classique et volume \u2014 effet dramatique doux", "areaServed": "Aix-en-Provence" }, "price": "75", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extensions de cils volume russe 2D/3D", "description": "Glamour et plein volume", "areaServed": "Aix-en-Provence" }, "price": "80", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+          ]
+        }
       }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/bycarlybeauty/"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Prestations beauté",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rehaussement de cils", "description": "Courbe naturelle et regard ouvert — 4 à 6 semaines" }, "price": "40", "priceCurrency": "EUR" },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Browlift", "description": "Sourcils structurés et levés naturellement" }, "price": "40", "priceCurrency": "EUR" },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Épilation et reconstruction des sourcils" }, "price": "30", "priceCurrency": "EUR" },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extensions cil à cil", "description": "Effet naturel — 1 extension par cil naturel" }, "price": "60", "priceCurrency": "EUR" },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extensions volume mixte", "description": "Classique et volume — effet dramatique doux" }, "price": "75", "priceCurrency": "EUR" },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extensions volume russe 2D/3D", "description": "Glamour et plein volume" }, "price": "80", "priceCurrency": "EUR" }
-      ]
-    }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="image/logo.png" />
+  <link rel="icon" type="image/png" href="photo/image/logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -93,7 +134,7 @@
     <a href="#" class="navbar__logo-link" aria-label="Retour en haut"><picture>
   <source srcset="photo/image/vraislogo.avif" type="image/avif">
   <source srcset="photo/image/vraislogo.webp" type="image/webp">
-  <img class="navbar__logo" src="photo/image/vraislogo.png" alt="Carly – By Carly Beauty" />
+  <img class="navbar__logo" src="photo/image/vraislogo.png" alt="Carly – By Carly Beauty" decoding="async" />
 </picture></a>
 
     <!-- Bouton réserver (mobile droite) + liens desktop -->
@@ -148,14 +189,14 @@
               <picture>
   <source srcset="photo/image/Hautd3.avif" type="image/avif">
   <source srcset="photo/image/Hautd3.webp" type="image/webp">
-  <img src="photo/image/Hautd3.png" alt="Résultat cils" />
+  <img src="photo/image/Hautd3.png" alt="Extensions de cils volume russe réalisées à Aix-les-Milles" decoding="async" />
 </picture>
             </div>
             <div class="frame frame--hero-sm">
               <picture>
   <source srcset="photo/image/haut2.avif" type="image/avif">
   <source srcset="photo/image/haut2.webp" type="image/webp">
-  <img src="photo/image/haut2.png" alt="Résultat cils" />
+  <img src="photo/image/haut2.png" alt="Rehaussement de cils avec teinture près d'Aix-en-Provence" decoding="async" />
 </picture>
             </div>
           </div>
@@ -165,7 +206,7 @@
               <picture>
   <source srcset="photo/image/Haut1.avif" type="image/avif">
   <source srcset="photo/image/Haut1.webp" type="image/webp">
-  <img src="photo/image/Haut1.png" alt="Résultat cils" />
+  <img src="photo/image/Haut1.png" alt="Extensions de cils cil à cil — By Carly Beauty, Aix-les-Milles" fetchpriority="high" decoding="async" />
 </picture>
             </div>
           </div>
@@ -175,7 +216,7 @@
         <div class="hero__text">
           <p class="hero__salon">@BYCARLYBEAUTY</p>
           <p class="hero__label">RENCONTREZ VOTRE</p>
-          <h1 class="hero__title">Lash Artist</h1>
+          <h2 class="hero__title">Lash Artist</h2>
 
           <div class="hero__bio-card">
             <p class="hero__bio-text">
@@ -207,7 +248,7 @@
     </div>
   </section>
 
-  <img class="wave" src="photo/wave-cream-to-brown.svg" alt="" />
+  <img class="wave" src="photo/wave-cream-to-brown.svg" alt="" loading="lazy" decoding="async" />
 
   <!-- ══════════════════════════════════════
        PRESTATIONS  — brun
@@ -225,7 +266,7 @@
             <picture>
   <source srcset="photo/image/Presta/Rehaussement%20de%20Cils.avif" type="image/avif">
   <source srcset="photo/image/Presta/Rehaussement%20de%20Cils.webp" type="image/webp">
-  <img src="photo/image/Presta/Rehaussement%20de%20Cils.png" alt="Rehaussement de Cils" />
+  <img src="photo/image/Presta/Rehaussement%20de%20Cils.png" alt="Rehaussement de cils — prestation By Carly Beauty" loading="lazy" decoding="async" />
 </picture>
           </div>
           <p class="arch-name">Rehaussement de Cils</p>
@@ -238,7 +279,7 @@
             <picture>
   <source srcset="photo/image/Presta/Browlift.avif" type="image/avif">
   <source srcset="photo/image/Presta/Browlift.webp" type="image/webp">
-  <img src="photo/image/Presta/Browlift.png" alt="Browlift" />
+  <img src="photo/image/Presta/Browlift.png" alt="Browlift — restructuration des sourcils" loading="lazy" decoding="async" />
 </picture>
           </div>
           <p class="arch-name">Browlift</p>
@@ -251,7 +292,7 @@
             <picture>
   <source srcset="photo/image/Presta/%C3%89pilation%20%26%20Sourcils.avif" type="image/avif">
   <source srcset="photo/image/Presta/%C3%89pilation%20%26%20Sourcils.webp" type="image/webp">
-  <img src="photo/image/Presta/%C3%89pilation%20%26%20Sourcils.png" alt="Épilation & Sourcils" />
+  <img src="photo/image/Presta/%C3%89pilation%20%26%20Sourcils.png" alt="Épilation et reconstruction des sourcils" loading="lazy" decoding="async" />
 </picture>
           </div>
           <p class="arch-name">Épilation &amp; Sourcils</p>
@@ -264,7 +305,7 @@
             <picture>
   <source srcset="photo/image/Presta/Cil%20%C3%A0%20Cil.avif" type="image/avif">
   <source srcset="photo/image/Presta/Cil%20%C3%A0%20Cil.webp" type="image/webp">
-  <img src="photo/image/Presta/Cil%20%C3%A0%20Cil.png" alt="Cil à Cil" />
+  <img src="photo/image/Presta/Cil%20%C3%A0%20Cil.png" alt="Extensions de cils cil à cil — effet naturel" loading="lazy" decoding="async" />
 </picture>
           </div>
           <p class="arch-name">Cil à Cil</p>
@@ -277,7 +318,7 @@
             <picture>
   <source srcset="photo/image/Presta/Mixte.avif" type="image/avif">
   <source srcset="photo/image/Presta/Mixte.webp" type="image/webp">
-  <img src="photo/image/Presta/Mixte.png" alt="Mixte" />
+  <img src="photo/image/Presta/Mixte.png" alt="Extensions de cils volume mixte" loading="lazy" decoding="async" />
 </picture>
           </div>
           <p class="arch-name">Volume Mixte</p>
@@ -290,7 +331,7 @@
             <picture>
   <source srcset="photo/image/Presta/Volume%20Russe%202D.avif" type="image/avif">
   <source srcset="photo/image/Presta/Volume%20Russe%202D.webp" type="image/webp">
-  <img src="photo/image/Presta/Volume%20Russe%202D.png" alt="Volume Russe 2D" />
+  <img src="photo/image/Presta/Volume%20Russe%202D.png" alt="Extensions de cils volume russe 2D/3D" loading="lazy" decoding="async" />
 </picture>
           </div>
           <p class="arch-name">Volume Russe 2D/3D</p>
@@ -305,7 +346,7 @@
     </div>
   </section>
 
-  <img class="wave" src="photo/wave-brown-to-cream.svg" alt="" />
+  <img class="wave" src="photo/wave-brown-to-cream.svg" alt="" loading="lazy" decoding="async" />
 
   <!-- ══════════════════════════════════════
        AVANT / APRÈS  — crème (stack scroll)
@@ -324,47 +365,47 @@
           <div class="wheel-card" data-idx="0"><picture>
   <source srcset="photo/les%20avant%20apres/aa1.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa1.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa1.png" alt="Nastasia – Rehaussement avec teinture" />
+  <img src="photo/les%20avant%20apres/aa1.png" alt="Nastasia – Rehaussement avec teinture" loading="lazy" decoding="async" />
 </picture></div>
           <div class="wheel-card" data-idx="1"><picture>
   <source srcset="photo/les%20avant%20apres/aa2.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa2.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa2.png" alt="Giulia – Rehaussement avec teinture" />
+  <img src="photo/les%20avant%20apres/aa2.png" alt="Giulia – Rehaussement avec teinture" loading="lazy" decoding="async" />
 </picture></div>
           <div class="wheel-card" data-idx="2"><picture>
   <source srcset="photo/les%20avant%20apres/aa3.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa3.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa3.png" alt="Ambre – Volume Russe 2D" />
+  <img src="photo/les%20avant%20apres/aa3.png" alt="Ambre – Volume Russe 2D" loading="lazy" decoding="async" />
 </picture></div>
           <div class="wheel-card" data-idx="3"><picture>
   <source srcset="photo/les%20avant%20apres/aa4.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa4.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa4.png" alt="Giulia – Browlift avec teinture + Rehaussement avec teinture" />
+  <img src="photo/les%20avant%20apres/aa4.png" alt="Giulia – Browlift avec teinture + Rehaussement avec teinture" loading="lazy" decoding="async" />
 </picture></div>
           <div class="wheel-card" data-idx="4"><picture>
   <source srcset="photo/les%20avant%20apres/aa5.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa5.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa5.png" alt="Ilona – Rehaussement avec teinture + Reconstruction sourcils" />
+  <img src="photo/les%20avant%20apres/aa5.png" alt="Ilona – Rehaussement avec teinture + Reconstruction sourcils" loading="lazy" decoding="async" />
 </picture></div>
           <div class="wheel-card" data-idx="5"><picture>
   <source srcset="photo/les%20avant%20apres/aa6.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa6.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa6.png" alt="Ambre – Browlift avec teinture + Rehaussement avec teinture" />
+  <img src="photo/les%20avant%20apres/aa6.png" alt="Ambre – Browlift avec teinture + Rehaussement avec teinture" loading="lazy" decoding="async" />
 </picture></div>
           <div class="wheel-card" data-idx="6"><picture>
   <source srcset="photo/les%20avant%20apres/aa7.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa7.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa7.png" alt="Alicia – Browlift" />
+  <img src="photo/les%20avant%20apres/aa7.png" alt="Alicia – Browlift" loading="lazy" decoding="async" />
 </picture></div>
           <div class="wheel-card" data-idx="7"><picture>
   <source srcset="photo/les%20avant%20apres/aa8.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa8.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa8.png" alt="Giulia – Browlift avec teinture + Rehaussement avec teinture" />
+  <img src="photo/les%20avant%20apres/aa8.png" alt="Giulia – Browlift avec teinture + Rehaussement avec teinture" loading="lazy" decoding="async" />
 </picture></div>
           <div class="wheel-card" data-idx="8"><picture>
   <source srcset="photo/les%20avant%20apres/aa9.avif" type="image/avif">
   <source srcset="photo/les%20avant%20apres/aa9.webp" type="image/webp">
-  <img src="photo/les%20avant%20apres/aa9.png" alt="Ilona – Browlift sans teinture" />
+  <img src="photo/les%20avant%20apres/aa9.png" alt="Ilona – Browlift sans teinture" loading="lazy" decoding="async" />
 </picture></div>
         </div>
       </div>
@@ -428,7 +469,7 @@
     </div>
   </section>
 
-  <img class="wave" src="photo/wave-cream-to-brown.svg" alt="" />
+  <img class="wave" src="photo/wave-cream-to-brown.svg" alt="" loading="lazy" decoding="async" />
 
   <!-- ══════════════════════════════════════
        POURQUOI BY CARLY  — brun, pleine largeur
@@ -470,7 +511,7 @@
 
   </section>
 
-  <img class="wave" src="photo/wave-brown-to-cream.svg" alt="" />
+  <img class="wave" src="photo/wave-brown-to-cream.svg" alt="" loading="lazy" decoding="async" />
 
   <!-- ══════════════════════════════════════
        SECTION LIBRE  — crème (à compléter)
@@ -510,7 +551,7 @@
 
   </section>
 
-  <img class="wave" src="photo/wave-cream-to-brown.svg" alt="" />
+  <img class="wave" src="photo/wave-cream-to-brown.svg" alt="" loading="lazy" decoding="async" />
 
   <!-- ══════════════════════════════════════
        AVIS CLIENTS  — brun
@@ -568,7 +609,7 @@
     </div>
   </section>
 
-  <img class="wave" src="photo/wave-brown-to-cream.svg" alt="" />
+  <img class="wave" src="photo/wave-brown-to-cream.svg" alt="" loading="lazy" decoding="async" />
 
   <!-- ══════════════════════════════════════
        INFOS PRATIQUES  — crème
@@ -586,32 +627,32 @@
           <a class="insta-bar__slot" href="https://www.instagram.com/bycarlybeauty/" target="_blank" rel="noopener"><picture>
   <source srcset="photo/inta/insta1.avif" type="image/avif">
   <source srcset="photo/inta/insta1.webp" type="image/webp">
-  <img src="photo/inta/insta1.png" alt="Instagram 1" />
+  <img src="photo/inta/insta1.png" alt="Réalisation extensions de cils — Instagram By Carly Beauty" loading="lazy" decoding="async" />
 </picture></a>
           <a class="insta-bar__slot" href="https://www.instagram.com/bycarlybeauty/" target="_blank" rel="noopener"><picture>
   <source srcset="photo/inta/insta2.avif" type="image/avif">
   <source srcset="photo/inta/insta2.webp" type="image/webp">
-  <img src="photo/inta/insta2.png" alt="Instagram 2" />
+  <img src="photo/inta/insta2.png" alt="Réalisation rehaussement de cils — Instagram By Carly Beauty" loading="lazy" decoding="async" />
 </picture></a>
           <a class="insta-bar__slot" href="https://www.instagram.com/bycarlybeauty/" target="_blank" rel="noopener"><picture>
   <source srcset="photo/inta/insta3.avif" type="image/avif">
   <source srcset="photo/inta/insta3.webp" type="image/webp">
-  <img src="photo/inta/insta3.png" alt="Instagram 3" />
+  <img src="photo/inta/insta3.png" alt="Réalisation browlift sourcils — Instagram By Carly Beauty" loading="lazy" decoding="async" />
 </picture></a>
           <a class="insta-bar__slot" href="https://www.instagram.com/bycarlybeauty/" target="_blank" rel="noopener"><picture>
   <source srcset="photo/inta/insta4.avif" type="image/avif">
   <source srcset="photo/inta/insta4.webp" type="image/webp">
-  <img src="photo/inta/insta4.png" alt="Instagram 4" />
+  <img src="photo/inta/insta4.png" alt="Réalisation volume russe — Instagram By Carly Beauty" loading="lazy" decoding="async" />
 </picture></a>
           <a class="insta-bar__slot" href="https://www.instagram.com/bycarlybeauty/" target="_blank" rel="noopener"><picture>
   <source srcset="photo/inta/insta5.avif" type="image/avif">
   <source srcset="photo/inta/insta5.webp" type="image/webp">
-  <img src="photo/inta/insta5.png" alt="Instagram 5" />
+  <img src="photo/inta/insta5.png" alt="Regard sublimé par extensions de cils — Instagram By Carly Beauty" loading="lazy" decoding="async" />
 </picture></a>
           <a class="insta-bar__slot" href="https://www.instagram.com/bycarlybeauty/" target="_blank" rel="noopener"><picture>
   <source srcset="photo/inta/insta6.avif" type="image/avif">
   <source srcset="photo/inta/insta6.webp" type="image/webp">
-  <img src="photo/inta/insta6.png" alt="Instagram 6" />
+  <img src="photo/inta/insta6.png" alt="Prestation cils et sourcils — Instagram By Carly Beauty" loading="lazy" decoding="async" />
 </picture></a>
         </div>
         <div class="insta-bar__actions">

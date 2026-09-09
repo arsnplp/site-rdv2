@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://bycarlybeauty.fr/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://bycarlybeauty.fr/mentions-legales.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <image:image>
+      <image:loc>https://bycarlybeauty.fr/photo/image/Haut1.png</image:loc>
+      <image:title>Extensions de cils à Aix-les-Milles — By Carly Beauty</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bycarlybeauty.fr/photo/image/Hautd3.png</image:loc>
+      <image:title>Rehaussement de cils près d'Aix-en-Provence</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bycarlybeauty.fr/photo/les%20avant%20apres/aa1.png</image:loc>
+      <image:title>Avant / après rehaussement de cils avec teinture</image:title>
+    </image:image>
   </url>
 
 </urlset>
